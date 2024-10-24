@@ -9,5 +9,17 @@
         "name": "Alpha"
     },
     "items": [
+        {
+            "id": "https://www.goplava.in/welcome-to-goplava.html",
+            "url": "https://www.goplava.in/welcome-to-goplava.html",
+            "title": "Welcome to GOPlava",
+            "author": {
+                "name": "Alpha"
+            },
+            "tags": [
+            ],
+            "date_published": "2024-10-24T11:56:17+05:30",
+            "date_modified": "2024-10-24T11:56:17+05:30"
+        }
     ]
 }
