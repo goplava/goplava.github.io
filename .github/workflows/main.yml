@@ -1,0 +1,24 @@
+name: Restore CNAME
+
+on:
+  push:
+    branches:
+      - main  # This will run whenever Publii pushes to your main branch
+
+jobs:
+  restore-cname:
+    runs-on: ubuntu-latest    # This runs on GitHub's servers, not your computer
+    steps:
+      - uses: actions/checkout@v2
+      
+      - name: Create CNAME
+        run: |
+          echo "goplava.in" > CNAME  # Replace this with your actual domain
+          
+      - name: Commit CNAME
+        run: |
+          git config --global user.name 'GitHub Action'
+          git config --global user.email 'action@github.com'
+          git add CNAME
+          git commit -m "Restore CNAME file" || echo "No changes to commit"
+          git push
